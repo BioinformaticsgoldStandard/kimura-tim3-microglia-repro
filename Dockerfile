@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Installazione JupyterLab e JupyterHub per compatibilita con Dora
-RUN pip3 install --no-cache-dir --break-system-packages jupyterlab jupyterhub notebook
+# Installazione JupyterLab e JupyterHub per compatibilità con Dora
+RUN pip3 install --no-cache-dir jupyterlab jupyterhub notebook
 
 # Installazione pacchetti R per Paper 2
 RUN R -e "install.packages(c('Seurat', 'Matrix', 'dplyr', 'ggplot2', 'readxl', 'tibble', 'stringr', 'ggtext', 'cowplot', 'remotes', 'IRkernel'), repos='https://cloud.r-project.org/')"
